@@ -1,0 +1,46 @@
+baseURL: https://ffwde.com/
+languageCode: en-us
+title: Fast Forward Engineering
+
+params:
+  motto: "Warp-speed, Zero Overhead."
+  description: |
+    At Fast Forward Engineering, we've honed a software development methodology that is as straightforward as it is powerful: Analyze, Prototype, Materialize – Fast.
+
+  sections:
+    mission:
+      heading: Mission
+      content: |
+        Our mission is crystal clear: to guide our clients through a seamless three-step journey, swiftly transforming their ideas into market-ready products and services. While our expertise spans various industries, our primary focus lies in delivering cutting-edge cybersecurity solutions.
+      columns:
+      - heading: Analyze
+        content: |
+          We kick off with a meticulous analysis phase, diving deep into the intricacies of the problem domain alongside our clients. Through collaborative brainstorming sessions, we unearth insights that serve as the foundation for our next crucial step: prototyping.
+      - heading: Prototype
+        content: |
+          Prototyping is the heartbeat of our process, where innovation meets speed. Leveraging our expertise, we craft agile, feature-limited prototypes at lightning speed, empowering our clients to validate concepts swiftly and make decisions with confidence.
+      - heading: Materialize
+        content: |
+          As we transition from prototype to production, our comprehensive approach ensures stability and quality every step of the way. Armed with a clear vision and validated concepts, we materialize your ideas to life with unparalleled efficiency and precision.
+
+    services:
+      heading: Services
+      columns:
+      - heading: Cloud, On-Premise & Hybrid
+        content: |
+          Unlock seamless software development across Cloud, On-Premise, and Hybrid environments with our versatile service offering.
+      - heading: Cyber Security
+        content: |
+          Experience fortified software development with our cybersecurity-centric service, safeguarding your digital assets with expertise and innovation.
+      - heading: IoT Systems
+        content: |
+          Empower your IoT vision with our specialized software development service, crafting robust solutions for seamless connectivity and smart functionality.
+
+menus:
+  main:
+  - name: About
+    url: /about/
+    weight: 10
+  - name: Blog
+    url: /blog/
+    weight: 20

@@ -1,0 +1,97 @@
+{{ define "main" }}
+<main>
+  <!-- big hero -->
+  <div class="bg-neutral-900">
+    <div class="max-w-screen-xl px-4 py-20 md:py-36 mx-auto">
+      <div class="mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12">
+          <div class="px-4 text-center sm:mb-6 lg:mb-0">
+              <h2 class="mx-auto pb-10 text-5xl font-normal text-neutral-800 dark:text-neutral-300 md:text-8xl md:pb-10">
+                  {{ .Site.Params.Motto }}
+              </h2>
+              <p class="max-w-xl mx-auto mb-6 font-light text-neutral-900 text-2xl md:mb-2 md:text-3xl dark:text-neutral-50">
+                  {{ .Site.Params.Description }}
+              </p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mission statement -->
+  <div class="bg-primary-800">
+    <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
+      <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
+        <div>
+          <h2 class="pb-10 text-4xl text-neutral-300 font-normal md:text-6xl md:pb-14">
+            {{ .Site.Params.Sections.Mission.Heading }}
+          </h2>
+          <p class="font-normal text-neutral-300 md:text-2xl">
+            {{ .Site.Params.Sections.Mission.Content }}
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col flex-1 gap-6 md:gap-10 md:pt-6 md:pb-8">
+        {{ range .Site.Params.Sections.Mission.Columns }}
+        <div>
+          <h3 class="pb-6 text-2xl font-normal text-neutral-300 md:pb-4 md:text-left">
+            {{ .heading }}
+          </h3>
+          <p class="font-normal text-neutral-300 md:text-left md:text-xl md:font-light">
+            {{ .content }}
+          </p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- services -->
+  <div class="bg-neutral-900 text-neutral-300">
+    <div class="max-w-screen-xl px-4 py-20 mx-auto text-center md:px-10">
+      <h2 class="mx-auto pb-12 text-4xl font-normal text-neutral-800 dark:text-neutral-300 md:text-6xl md:pb-20">
+        {{ .Site.Params.Sections.Services.Heading }}
+      </h2>
+      <div class="flex flex-col gap-8 md:flex-row md:gap-20">
+        {{ range .Site.Params.Sections.Services.Columns }}
+        <div class="flex-1">
+          <h3 class="pb-6 text-2xl font-normal text-neutral-300 md:text-left">
+            {{ .heading }}
+          </h3>
+          <p class="font-normal md:text-left md:text-xl md:font-light">
+            {{ .content }}
+          </p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- from the blog -->
+  <div class="bg-neutral-200 text-neutral-800">
+    <div class="max-w-screen-xl px-4 py-20 mx-auto text-center md:px-10">
+      <h2 class="mx-auto pb-10 text-4xl font-normal md:text-6xl md:pb-16">
+        From the blog
+      </h2>
+      <div class="flex flex-col gap-6 text-left mb-16 md:flex-row md:gap-12 md:mb-20">
+        {{ range (.Paginator 2).Pages }}
+        <div class="flex-1 p-8">
+          <a href="{{ .Permalink }}">
+            <h3 class="pb-2 text-2xl font-normal">
+              {{ .Title }}
+            </h3>
+          </a>
+          <p class="md:font-light md:text-xl">
+            {{ .Summary | plainify | safeHTML }}
+          </p>
+          <a href="{{ .Permalink }}" class="text-xl font-normal mt-2 block">
+            Read more..
+          </a>
+        </div>
+        {{ end }}
+      </div>
+      <a href="/blog/" class="mx-auto bg-primary-700 px-10 py-4 rounded-full text-neutral-300 text-2xl">
+        View all posts
+      </a>
+    </div>
+  </div>
+</main>
+{{ end }}
