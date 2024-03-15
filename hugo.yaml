@@ -2,10 +2,21 @@ baseURL: https://ffwde.com/
 languageCode: en-us
 title: Fast Forward Engineering
 
+paginate: 10
+
 params:
   motto: "Warp-speed, Zero Overhead."
   description: |
     At Fast Forward Engineering, we've honed a software development methodology that is as straightforward as it is powerful: Analyze, Prototype, Materialize – Fast.
+
+  imprint:
+    gmbh: Fast Forward Engineering GmbH
+    address: Via dei Campi della Rienza 30, 39031 Brunico, Italy
+    vat: IT03152640219
+    fiscal: "03152640219"
+    rea: BZ-236497
+    sdi: USAL8PV
+    capital: 35.000,00€
 
   sections:
     mission:
@@ -36,6 +47,11 @@ params:
         content: |
           Empower your IoT vision with our specialized software development service, crafting robust solutions for seamless connectivity and smart functionality.
 
+  socials:
+    github: https://github.com/ffwdeng
+    linkedin: https://www.linkedin.com/company/ffwde
+    email: contact@ffwde.com
+
 menus:
   main:
   - name: About
@@ -44,3 +60,18 @@ menus:
   - name: Blog
     url: /blog/
     weight: 20
+
+  footer:
+  - name: About
+    url: /about/
+    weight: 10
+  - name: Blog
+    url: /blog/
+    weight: 20
+  - name: Contact
+    url: https://forms.office.com/r/ex4nbnqcsy
+    weight: 30
+
+markup:
+  highlight:
+    style: github-dark

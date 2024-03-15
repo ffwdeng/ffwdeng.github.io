@@ -1,0 +1,46 @@
+{{ define "main" }}
+<main>
+  <div class="prose max-w-prose px-6 py-20 mx-auto">
+    <header class="mb-12">
+      <h1 class="text-4xl font-semibold">
+        {{ .Title }}
+      </h1>
+    </header>
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "blog") }}
+    <div>
+      {{ range $paginator.Pages }}
+        <div class="mb-12">
+          <h2 class="not-prose text-2xl mb-4">
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </h2>
+          {{ if .Date }}
+            <p class="text-neutral-500">
+              {{ time.Format (":date_medium") .Date }}
+            </p>
+          {{ end }}
+          <p>
+            {{ .Summary | plainify | safeHTML }}
+          </p>
+          <a href="{{ .Permalink }}" class="not-prose text-xl font-semibold">
+            Read more..
+          </a>
+        </div>
+      {{ end }}
+    </div>
+    <div class="not-prose text-xl">
+      {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}" class="block float-left">
+        &lt; Prev
+      </a>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}" class="block float-right">
+        Next &gt;
+      </a>
+      {{ end }}
+    </div>
+</div>
+</main>
+{{ end }}

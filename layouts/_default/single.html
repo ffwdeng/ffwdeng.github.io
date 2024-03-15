@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article>
+  <div class="prose max-w-prose px-6 py-20 mx-auto">
+    <header class="mb-10">
+      <h1 class="text-4xl font-semibold">
+        {{ .Title }}
+      </h1>
+      {{ if .Date }}
+      <p class="text-xl text-neutral-500">
+        {{ time.Format (":date_medium") .Date }}
+        {{ if (.Param "author") }}
+        — by <span>{{ .Param "author" }}</span>
+        {{ end }}
+      </p>
+      {{ end }}
+    </header>
+    <div class="text-lg md:text-base">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

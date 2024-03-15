@@ -23,15 +23,14 @@ This is the third part of the series on securing applications on Linux. The firs
 
 As usual we start citing the appropriate man page, [keyrings(7)](https://man7.org/linux/man-pages/man7/keyrings.7.html):
 
-```
-The Linux key-management facility is primarily a way for various
+> The Linux key-management facility is primarily a way for various
 kernel components to retain or cache security data,
 authentication keys, encryption keys, and other data in the
-kernel
-System call interfaces are provided so that user-space programs
+kernel.
+>
+>System call interfaces are provided so that user-space programs
 can manage those objects and also use the facility for their own
 purposes; see add_key(2), request_key(2), and keyctl(2).
-```
 
 So, this means that we can use the kernel as a vault, storing secrets in it. There are various types of keys we can create:
 

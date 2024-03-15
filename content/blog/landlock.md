@@ -24,9 +24,7 @@ the use of seccomp which allows us to restrict the syscalls that a process or a 
 
 Landlock is a Linux security module that allows to restrict the access to the filesystem. Quoting the documentation page:
 
-```
-The goal of Landlock is to enable to restrict ambient rights (e.g. global filesystem access) for a set of processes. Because Landlock is a stackable LSM, it makes possible to create safe security sandboxes as new security layers in addition to the existing system-wide access-controls. This kind of sandbox is expected to help mitigate the security impact of bugs or unexpected/malicious behaviors in user space applications. Landlock empowers any process, including unprivileged ones, to securely restrict themselves.
-```
+> The goal of Landlock is to enable to restrict ambient rights (e.g. global filesystem access) for a set of processes. Because Landlock is a stackable LSM, it makes possible to create safe security sandboxes as new security layers in addition to the existing system-wide access-controls. This kind of sandbox is expected to help mitigate the security impact of bugs or unexpected/malicious behaviors in user space applications. Landlock empowers any process, including unprivileged ones, to securely restrict themselves.
 
 In other words, Landlock allows a user space application to create a ruleset which will be used to restrict the access to the filesystem. In order for an application to use landlock it needs to first create a ruleset which contains the available rules. Check the documentation here for the explanation of the available access rights.
 

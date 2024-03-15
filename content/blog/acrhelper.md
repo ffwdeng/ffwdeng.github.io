@@ -21,7 +21,7 @@ When using docker in production eventually the time will come where manually dis
 
 ## Credential stores and helpers
 
-In its simplest form, when you run docker `login --username myuser --password mypassword docker.io` the following will be written in `~/.docker/config.json`:
+In its simplest form, when you run `docker login --username myuser --password mypassword docker.io` the following will be written in `~/.docker/config.json`:
 
 ```json
 {
