@@ -5,34 +5,33 @@ title: Fast Forward Engineering
 paginate: 10
 
 params:
-  motto: "Warp-speed, Zero Overhead."
+  motto: "fast forward engineering"
   description: |
-    At Fast Forward Engineering, we've honed a software development methodology that is as straightforward as it is powerful: Analyze, Prototype, Materialize – Fast.
+     ...where software development follows a methodology as straightforward as it is powerful. we first analyze, create prototype, then materialize. and all that while being time sensitive and efficient.
 
   imprint:
-    gmbh: Fast Forward Engineering GmbH
+    gmbh: Fast Forward Engineering Srl
     address: Via dei Campi della Rienza 30, 39031 Brunico, Italy
     vat: IT03152640219
     fiscal: "03152640219"
     rea: BZ-236497
     sdi: USAL8PV
-    capital: 35.000,00€
 
   sections:
     mission:
       heading: Mission
       content: |
-        Our mission is crystal clear: to guide our clients through a seamless three-step journey, swiftly transforming their ideas into market-ready products and services. While our expertise spans various industries, our primary focus lies in delivering cutting-edge cybersecurity solutions.
+        Our approach is to guide our clients through a seamless three-step journey, swiftly transforming their ideas into market-ready products and services. while our expertise spans various industries, our primary focus lies in delivering cutting-edge cybersecurity solutions.
       columns:
       - heading: Analyze
         content: |
-          We kick off with a meticulous analysis phase, diving deep into the intricacies of the problem domain alongside our clients. Through collaborative brainstorming sessions, we unearth insights that serve as the foundation for our next crucial step: prototyping.
+            We start with a comprehensive and attentive analysis phase. listening to our clients, we dive deep into the complexities of the problem domain alongside them. through collaborative brainstorming sessions, we come to the insights that serve as the foundation for our next crucial step: prototyping.
       - heading: Prototype
         content: |
-          Prototyping is the heartbeat of our process, where innovation meets speed. Leveraging our expertise, we craft agile, feature-limited prototypes at lightning speed, empowering our clients to validate concepts swiftly and make decisions with confidence.
+          Prototyping is at the crux of our process, where innovation meets speed. leveraging our expertise, we craft agile, feature-limited prototypes, while empowering our clients to validate concepts and make decisions with confidence. the idea is to repeat this step as often as neccesary, while staying on the efficiancy path, until the right approach has been found.
       - heading: Materialize
         content: |
-          As we transition from prototype to production, our comprehensive approach ensures stability and quality every step of the way. Armed with a clear vision and validated concepts, we materialize your ideas to life with unparalleled efficiency and precision.
+            As we transition from prototype to production, our comprehensive approach ensures stability and quality every step of the way. equipped with a clear vision and validated concepts, we materialize your ideas to life with unparalleled efficiency and precision.
 
     services:
       heading: Services
