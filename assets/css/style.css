@@ -1113,6 +1113,10 @@ video {
   margin-right: auto;
 }
 
+.-mt-16 {
+  margin-top: -4rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1139,10 +1143,6 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.-mt-16 {
-  margin-top: -4rem;
 }
 
 .block {
@@ -1195,6 +1195,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .max-w-prose {
@@ -1408,6 +1412,10 @@ video {
   line-height: 1.75rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -1601,21 +1609,12 @@ EmojiSymbols;
     padding-right: 1.5rem;
   }
 
-  .md\:py-36 {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-  }
-
   .md\:pb-0 {
     padding-bottom: 0px;
   }
 
   .md\:pb-10 {
     padding-bottom: 2.5rem;
-  }
-
-  .md\:pb-14 {
-    padding-bottom: 3.5rem;
   }
 
   .md\:pb-16 {
@@ -1650,6 +1649,11 @@ EmojiSymbols;
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:text-6xl {
