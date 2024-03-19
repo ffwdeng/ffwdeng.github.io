@@ -7,7 +7,7 @@ paginate: 10
 params:
   motto: "fast forward engineering"
   description: |
-     ...where software development follows a methodology as straightforward as it is powerful. We first analyze the problem domain, create prototypes, then deliver. And all that while being time sensitive and efficient.
+     ...where software development follows a methodology as straightforward as it is powerful. We first **analyze** the problem domain, create **prototype**s, then **deliver**. And all that while being time sensitive and efficient.
 
   imprint:
     gmbh: Fast Forward Engineering Srl
@@ -23,17 +23,17 @@ params:
       content: |
         Our approach is to guide our clients through a seamless three-step journey, swiftly transforming their ideas into market-ready products and services.
       content2: |
-        While our expertise spans various industries, our primary focus lies in delivering cutting-edge cybersecurity solutions.
+        While our expertise spans various industries, our primary focus lies in delivering **cutting-edge cybersecurity** solutions.
       columns:
       - heading: Analyze
         content: |
-            We start with a comprehensive and attentive analysis phase. listening to our clients, we dive deep into the complexities of the problem domain alongside them. Through collaborative brainstorming sessions, we come to the insights that serve as the foundation for our next crucial step: prototyping.
+            We start with a **comprehensive and attentive** analysis phase. listening to our clients, we **dive deep** into the complexities of the problem domain alongside them. Through **collaborative brainstorming sessions**, we come to the insights that serve as the foundation for our next crucial step: prototyping.
       - heading: Prototype
         content: |
-          Prototyping is at the crux of our process, where innovation meets speed. Leveraging our expertise, we craft agile, feature-limited prototypes, while empowering our clients to validate concepts and make decisions with confidence. The idea is to repeat this step as often as neccesary, while staying on the efficiancy path, until the right approach has been found.
+          Prototyping is at the **crux of our process**, where innovation meets speed. Leveraging our expertise, we craft **agile, feature-limited prototypes**, while empowering our clients to **validate concepts** and **make decisions with confidence**. The idea is to **repeat** this step as often as neccesary, while staying on the efficiancy path, until the **right approach** has been found.
       - heading: Deliver
         content: |
-            As we transition from prototype to production, our comprehensive approach ensures stability and quality every step of the way. Equipped with a clear vision and validated concepts, we deliver your ideas to life with unparalleled efficiency and precision.
+            As we transition from prototype to production, our comprehensive approach ensures **stability and quality** every step of the way. Equipped with a **clear vision and validated concepts**, we deliver your ideas to life with unparalleled **efficiency and precision**.
 
     services:
       heading: Services
@@ -61,17 +61,23 @@ menus:
   - name: Blog
     url: /blog/
     weight: 20
+  - name: Imprint
+    url: /imprint/
+    weight: 30
 
   footer:
   - name: About
     url: /about/
     weight: 10
-  - name: Blog
-    url: /blog/
-    weight: 20
   - name: Contact
     url: https://forms.office.com/r/ex4nbnqcsy
+    weight: 20
+  - name: Blog
+    url: /blog/
     weight: 30
+  - name: Imprint
+    url: /imprint/
+    weight: 40
 
 markup:
   highlight:
