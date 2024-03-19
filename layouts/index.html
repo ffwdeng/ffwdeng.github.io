@@ -12,10 +12,23 @@
         </p>
       </div>
     </div>
+
+    <!-- scroll arrow -->
+    <div  x-data="{arrow: {}}"
+          x-init="arrow = $arrow"
+          x-on:scroll.window="arrow = $arrow"
+          :class="{'hidden': arrow.hidden}"
+          class="absolute inset-x-0 bottom-10 md:bottom-20">
+      <a href="#mission" @click.prevent="scrollTo('#mission')">
+        <img  src="/images/down-arrow.svg"
+              :class="'opacity-' + arrow.opacity"
+              class="mx-auto h-16 transition" />
+      </a>
+    </div>
   </div>
 
   <!-- mission statement -->
-  <div class="bg-primary-700">
+  <div class="bg-primary-700" id="mission">
     <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
       <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
         <div>
@@ -91,5 +104,34 @@
       </a>
     </div>
   </div>
+
 </main>
+<script>
+  function scrollTo(selector) {
+    document.querySelector(selector).scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
+  /* Maps range 0-50 to 0-100 */
+  function mapPos(num) {
+    const min = 0
+    const inMax = 50
+    const outMax = 100
+
+    return ((num - min) * (outMax - min)) / (inMax - min) + min
+  }
+
+  document.addEventListener('alpine:init', () => {
+    /* Calculates desired arrow opacity from scroll position */
+    Alpine.magic('arrow', () => {
+      const scrollPos = Math.round((window.scrollY / window.innerHeight) * 10) * 10
+
+      return {
+        opacity: 100 - mapPos(Math.min(scrollPos, 50)),
+        hidden: scrollPos >= 60,
+      }
+    })
+  })
+</script>
 {{ end }}
