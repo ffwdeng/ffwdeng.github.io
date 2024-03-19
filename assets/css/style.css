@@ -1092,42 +1092,17 @@ video {
   position: absolute;
 }
 
-.relative {
-  position: relative;
-}
-
-.sticky {
-  position: sticky;
-}
-
-.inset-y-0 {
-  top: 0px;
-  bottom: 0px;
-}
-
 .inset-x-0 {
   left: 0px;
   right: 0px;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
 }
 
 .bottom-20 {
   bottom: 5rem;
 }
 
-.left-0 {
-  left: 0px;
+.top-0 {
+  top: 0px;
 }
 
 .z-50 {
@@ -1207,8 +1182,8 @@ video {
   height: 2.5rem;
 }
 
-.h-20 {
-  height: 5rem;
+.h-16 {
+  height: 4rem;
 }
 
 .h-6 {
@@ -1219,14 +1194,6 @@ video {
   height: 100lvh;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
-.h-0 {
-  height: 0px;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1235,20 +1202,12 @@ video {
   width: 2.5rem;
 }
 
-.w-20 {
-  width: 5rem;
-}
-
 .w-6 {
   width: 1.5rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-0 {
-  width: 0px;
 }
 
 .max-w-3xl {
@@ -1357,14 +1316,6 @@ video {
 
 .divide-opacity-90 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 0.9;
-}
-
-.self-end {
-  align-self: flex-end;
-}
-
-.self-center {
-  align-self: center;
 }
 
 .rounded-full {
@@ -2020,10 +1971,6 @@ EmojiSymbols;
     position: sticky;
   }
 
-  .md\:bottom-20 {
-    bottom: 5rem;
-  }
-
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -2054,10 +2001,6 @@ EmojiSymbols;
 
   .md\:h-5 {
     height: 1.25rem;
-  }
-
-  .md\:h-16 {
-    height: 4rem;
   }
 
   .md\:w-5 {

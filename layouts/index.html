@@ -18,11 +18,12 @@
           x-init="arrow = $arrow"
           x-on:scroll.window="arrow = $arrow"
           :class="{'hidden': arrow.hidden}"
-          class="absolute inset-x-0 bottom-10 md:bottom-20">
+          :style="{'bottom': arrow.bottom + 'rem'}"
+          class="absolute inset-x-0 bottom-20">
       <a href="#mission" @click.prevent="scrollTo('#mission')">
         <img  src="/images/down-arrow.svg"
-              :class="'opacity-' + arrow.opacity"
-              class="mx-auto h-16 transition" />
+              :style="{'opacity': arrow.opacity}"
+              class="mx-auto h-16" />
       </a>
     </div>
   </div>
@@ -113,23 +114,15 @@
     })
   }
 
-  /* Maps range 0-50 to 0-100 */
-  function mapPos(num) {
-    const min = 0
-    const inMax = 50
-    const outMax = 100
-
-    return ((num - min) * (outMax - min)) / (inMax - min) + min
-  }
-
   document.addEventListener('alpine:init', () => {
     /* Calculates desired arrow opacity from scroll position */
     Alpine.magic('arrow', () => {
-      const scrollPos = Math.round((window.scrollY / window.innerHeight) * 10) * 10
+      const scrollPos = Math.min(window.scrollY / window.innerHeight, 1.0)
 
       return {
-        opacity: 100 - mapPos(Math.min(scrollPos, 50)),
-        hidden: scrollPos >= 60,
+        opacity: 1.0 - (scrollPos / 0.8),
+        bottom: 5.0 + (scrollPos * 4),
+        hidden: scrollPos >= 0.8,
       }
     })
   })
