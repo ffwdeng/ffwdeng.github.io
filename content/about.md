@@ -2,10 +2,8 @@
 title: About us
 ---
 
-Our team comprises talented young individuals with diverse skill sets, allowing us to effectively tackle various stages of the software lifecycle.
+Our team benefits from over 15 years of combined experience, strengthened by the guidance of senior business advisors with over three decades of invaluable industry insight. While headquartered in Italy, we also operate from Austria as our second base location.
 
-As a company, we foster an environment of innovation and collaboration built on trust, all united towards a shared vision.
+This combination of experience and fresh talent enables us to effectively navigate all stages of the software and product delivery lifecycle. Our culture of innovation, collaboration, and trust allows professionals from around the globe to contribute to our projects, as we embrace remote work.
 
-While our headquarters are situated in Italy, we embrace remote work, welcoming contributions from individuals worldwide. Currently, our team consists of experts spanning three different countries.
-
-With our rapid growth, we continuously seek out fresh talent to join our dynamic team.
+With our commitment to continuous growth and excellence, we eagerly welcome new additions to our dynamic team, ensuring we remain at the forefront of software development.
