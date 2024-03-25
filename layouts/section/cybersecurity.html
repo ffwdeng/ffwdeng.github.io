@@ -1,0 +1,97 @@
+{{ define "main" }}
+<main class="bg-neutral-900 text-white -mt-16">
+  <!-- big hero -->
+  <div class="bg-neutral-800 h-lvh flex flex-col justify-center">
+    <div class="max-w-screen-xl px-4 mx-auto">
+      <div class="px-4 text-center sm:mb-6 lg:mb-0">
+        <h2 class="mx-auto pb-10 text-4xl text-right font-normal md:text-8xl md:pb-10">
+          {{ .Title }}
+        </h2>
+        <p class="float-right max-w-3xl mb-6 text-right font-light text-2xl md:mb-2 md:text-4xl">
+          {{ .Description | markdownify }}
+        </p>
+      </div>
+    </div>
+
+    <!-- scroll arrow -->
+    <div  x-data="{arrow: {}}"
+          x-init="arrow = $arrow"
+          x-on:scroll.window="arrow = $arrow"
+          :class="{'hidden': arrow.hidden}"
+          :style="{'bottom': arrow.bottom + 'rem'}"
+          class="absolute inset-x-0 bottom-20">
+      <a href="#mission" @click.prevent="scrollTo('#mission')">
+        <img  src="/images/down-arrow.svg"
+              :style="{'opacity': arrow.opacity}"
+              class="mx-auto h-10 md:h-16" />
+      </a>
+    </div>
+  </div>
+
+  <div class="bg-white text-neutral-900">
+    <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
+      <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
+        <div>
+          <p class="font-semibold text-center text-3xl pb-8 md:text-left md:text-6xl">
+            {{ .Params.Sections.Acyberf.Title }}
+          </p>
+        </div>
+        <div class="flex flex-col flex-1 gap-6 text-1xl md:text-left md:text-3xl md:gap-10 md:pt-6 md:pb-8">
+            {{ .Params.Sections.Acyberf.Content}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-neutral-900">
+    <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
+      <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
+        <div>
+          <p class="font-semibold text-center text-3xl pb-8 md:text-right md:text-6xl">
+            {{ .Params.Sections.Dldata.Title }}
+          </p>
+        </div>
+        <div class="flex flex-col flex-1 gap-6 text-1xl md:text-right md:text-3xl md:gap-10 md:pt-6 md:pb-8">
+            {{ .Params.Sections.Dldata.Content}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white text-neutral-900">
+    <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
+      <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
+        <div>
+          <p class="font-semibold text-center text-3xl pb-8 md:text-left md:text-6xl">
+            {{ .Params.Sections.Elearn.Title }}
+          </p>
+        </div>
+        <div class="flex flex-col flex-1 gap-6 text-1xl md:text-left md:text-3xl md:gap-10 md:pt-6 md:pb-8">
+            {{ .Params.Sections.Elearn.Content}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<script>
+  function scrollTo(selector) {
+    document.querySelector(selector).scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
+  document.addEventListener('alpine:init', () => {
+    /* Calculates desired arrow opacity from scroll position */
+    Alpine.magic('arrow', () => {
+      const scrollPos = Math.min(window.scrollY / window.innerHeight, 1.0)
+
+      return {
+        opacity: 1.0 - (scrollPos / 0.8),
+        bottom: 5.0 + (scrollPos * 4),
+        hidden: scrollPos >= 0.8,
+      }
+    })
+  })
+</script>
+{{ end }}

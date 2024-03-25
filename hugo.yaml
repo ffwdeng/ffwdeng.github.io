@@ -61,12 +61,18 @@ menus:
   - name: About
     url: /about/
     weight: 10
+  - name: Cybersecurity
+    url: /cybersecurity/
+    weight: 20
+  - name: Solutions
+    url: /solutions/
+    weight: 30
   - name: Blog
     url: /blog/
-    weight: 20
+    weight: 40
   - name: Imprint
     url: /imprint/
-    weight: 30
+    weight: 50
 
   footer:
   - name: About
