@@ -1,16 +1,13 @@
 ---
 title: Cybersecurity Portofolio
-description: Over the last decade and a half, we've been busy building advanced Cybersecurity solutions. Some of those include am **Advanced Cyberanalytics Framework**, a **Distributed Live Detection and Threat Analysis Platform**, an​**E-learning Cybersecurity Platform**  and may others...​
+description: Our proficiency lies in **postmortem incident forensic** data recovery and threat **reverse engineering**, alongside expertise in **threat hunting** and **network security** within intricate environments.
 params:
   sections:
-    acyberf: 
-      title: Advanced Cyberanalytics Framework
-      content: The advanced analytics interface tailored for post-analysis of network security data flows and security incident reporting provides users with the capability to construct custom dashboards for data visualization. It enables the definition of sophisticated automated agents dedicated to data processing for post-analysis and automated decision-making. Furthermore, the platform facilitates big data correlation and aggregation to enhance insights and efficiencies.
-    dldata:
-      title: Distributed Live Detection and Threat Analysis Platform
-      content: The modular, distributed engine is designed to execute live threat analysis utilizing high-interaction honeypots. Offering versatility, it can function as either an advanced high-interaction honeypot or a dynamic analysis engine system. Key features include real-time monitoring of attacks with comprehensive attack geo-localization and visualization capabilities, support for console commands, tracking filesystem modifications, and monitoring network packet activity. Additionally, the system ensures persistent data storage of conducted attacks and provides tools for data analysis and report generation. It supports a range of widely used protocols including SSH, Telnet, FTP, HTTP, and SMB.
-    elearn:
-      title: E-learning Cybersecurity Platform
-      content: The comprehensive full-stack solution for e-learning courses emphasizes cyber security training and hands-on learning experiences. Users can define courses and manage students while dynamically generating training environments featuring meticulously crafted vulnerabilities and ready-to-play capture-the-flag challenges.
+    forensics: 
+      title: Computer Forensics
+      content: The scope of cyber security activities extends beyond mere threat identification. Leveraging a combination of proprietary and third-party tools and software, our endeavors encompass comprehensive artifact analysis and examination of captured binaries. Our postmortem incident analysis entails sophisticated procedures, including threat reverse engineering and meticulous system analysis and data recovery, all conducted with the overarching objective of investigation and resolution.
+    secanal:
+      title: Security Analysis
+      content: Our team comprises seasoned experts in security analysis, boasting extensive experience in navigating contemporary cyber threats. Our endeavors within the domain of security analysis have been conducted across enterprise and research landscapes. A diverse array of tools and software, including proprietary developments, has been employed by our team. Our service portfolio encompasses a range of offerings such as threat hunting, network behavior analysis within intricate infrastructures, and bug detection facilitated through source code analysis and fuzzing techniques.
 ---
 

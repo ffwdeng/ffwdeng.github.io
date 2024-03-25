@@ -20,7 +20,7 @@
           :class="{'hidden': arrow.hidden}"
           :style="{'bottom': arrow.bottom + 'rem'}"
           class="absolute inset-x-0 bottom-20">
-      <a href="#mission" @click.prevent="scrollTo('#mission')">
+      <a href="#services" @click.prevent="scrollTo('#services')">
         <img  src="/images/down-arrow.svg"
               :style="{'opacity': arrow.opacity}"
               class="mx-auto h-10 md:h-16" />
@@ -28,46 +28,31 @@
     </div>
   </div>
 
-  <div class="bg-white text-neutral-900">
-    <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
-      <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
-        <div>
-          <p class="font-semibold text-center text-3xl pb-8 md:text-left md:text-6xl">
-            {{ .Params.Sections.Acyberf.Title }}
-          </p>
-        </div>
-        <div class="flex flex-col flex-1 gap-6 text-1xl md:text-left md:text-3xl md:gap-10 md:pt-6 md:pb-8">
-            {{ .Params.Sections.Acyberf.Content}}
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="bg-neutral-900">
     <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
       <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
         <div>
-          <p class="font-semibold text-center text-3xl pb-8 md:text-right md:text-6xl">
-            {{ .Params.Sections.Dldata.Title }}
+          <p class="font-semibold text-center text-3xl pb-8 md:text-left md:text-6xl">
+            {{ .Params.Sections.Forensics.Title }}
           </p>
         </div>
-        <div class="flex flex-col flex-1 gap-6 text-1xl md:text-right md:text-3xl md:gap-10 md:pt-6 md:pb-8">
-            {{ .Params.Sections.Dldata.Content}}
+        <div class="flex flex-col flex-1 gap-6 text-1xl md:text-left md:text-3xl md:gap-10 md:pt-6 md:pb-8">
+            {{ .Params.Sections.Forensics.Content}}
         </div>
       </div>
     </div>
   </div>
 
-  <div class="bg-white text-neutral-900">
+  <div class="bg-white text-neutral-900" id="services">
     <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
       <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
         <div>
-          <p class="font-semibold text-center text-3xl pb-8 md:text-left md:text-6xl">
-            {{ .Params.Sections.Elearn.Title }}
+          <p class="font-semibold text-center text-3xl pb-8 md:text-right md:text-6xl">
+            {{ .Params.Sections.Secanal.Title }}
           </p>
         </div>
-        <div class="flex flex-col flex-1 gap-6 text-1xl md:text-left md:text-3xl md:gap-10 md:pt-6 md:pb-8">
-            {{ .Params.Sections.Elearn.Content}}
+        <div class="flex flex-col flex-1 gap-6 text-1xl md:text-right md:text-3xl md:gap-10 md:pt-6 md:pb-8">
+            {{ .Params.Sections.Secanal.Content | markdownify }}
         </div>
       </div>
     </div>
