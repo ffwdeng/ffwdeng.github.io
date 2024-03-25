@@ -59,9 +59,6 @@
   <!-- services -->
   <div class="bg-neutral-900">
     <div class="max-w-screen-xl px-4 py-20 mx-auto text-center md:px-10">
-      <h2 class="mx-auto pb-12 text-4xl font-normal md:text-6xl md:pb-20">
-        {{ .Site.Params.Sections.Services.Heading }}
-      </h2>
       <div class="flex flex-col gap-8 md:flex-row md:gap-20">
         {{ range .Site.Params.Sections.Services.Columns }}
         <div class="flex-1">
@@ -81,7 +78,7 @@
   <div class="bg-white text-neutral-900">
     <div class="max-w-screen-xl px-4 py-20 mx-auto text-center md:px-10">
       <h2 class="mx-auto pb-10 text-4xl font-normal md:text-6xl md:pb-16">
-        From our blog
+        Latest from our blog
       </h2>
       <div class="flex flex-col gap-6 text-left mb-16 md:flex-row md:gap-12 md:mb-20">
         {{ range (.Paginator 2).Pages }}

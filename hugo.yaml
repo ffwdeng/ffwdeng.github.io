@@ -44,6 +44,9 @@ params:
       - heading: Cyber Security
         content: |
           Experience fortified software development with our cybersecurity-centric service, safeguarding your digital assets with expertise and innovation.
+      - heading: Data Analytics
+        content: |
+          Discover the potential within your data with our Data Analytics expertise. We'll uncover hidden insights, optimize operations, and guide you every step of the way.
       - heading: IoT Systems
         content: |
           Empower your IoT vision with our specialized software development service, crafting robust solutions for seamless connectivity and smart functionality.
