@@ -13,10 +13,10 @@
 {{ partial "meta" . }}
 <script>
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
+    if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
     } else {
-        document.documentElement.classList.remove('dark')
+        document.documentElement.classList.remove("dark")
     }
 </script>
 {{ $styles := resources.Get "/css/style.css" | postCSS }}
@@ -26,3 +26,73 @@
 {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
 {{ end }}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+    window.cookieconsent.initialise({
+        type: "opt-in",
+        container: document.getElementById("content"),
+        palette: {
+            popup: { background: "#151D2E" },
+            button: { background: "#00957D" },
+        },
+        revokable: true,
+        onInitialise: function (status) {
+            console.log(this.hasConsented())
+            if(this.hasConsented()) {
+                setGA();
+            }
+        },
+        onStatusChange: function (status) {
+            if(this.hasConsented()) {
+                setGA();
+            } else {
+                deleteCookies(this.options.cookie.name);
+            }
+        },
+        law: {
+            regionalLaw: false,
+        },
+        location: true,
+        content: {
+            message: "This website uses cookies to improve your experience.",
+            dismiss: "Got it",
+            allow: "Allow cookies",
+            deny: "Decline",
+            link: "Learn more",
+            href: "/cookies",
+            close: "&#x274c;",
+            target: "_blank",
+        },
+        cookie: {
+            domain: ".ffwde.com"
+        }
+    });
+
+    window.dataLayer = window.dataLayer || [];
+    
+    function gtag() { dataLayer.push(arguments); }
+    
+    gtag("js", new Date());
+    gtag("config", "G-YMCD9X5MJP", { "anonymize_ip": true });
+
+    function setGA() {
+        var s = document.createElement("script");
+        s.type = "text/javascript"
+        s.async = "true";
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-YMCD9X5MJP";
+        var x = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+    };
+
+    function deleteCookies(cookieconsent_name) {
+        var keep = [cookieconsent_name, "DYNSRV"];
+
+        document.cookie.split(";").forEach(function (c) {
+            c = c.split("=")[0].trim();
+            if (!~keep.indexOf(c))
+                document.cookie = c + "=;" + "expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+        });
+    };
+</script>
