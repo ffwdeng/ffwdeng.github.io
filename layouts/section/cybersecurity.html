@@ -19,7 +19,7 @@
           x-on:scroll.window="arrow = $arrow"
           :class="{'hidden': arrow.hidden}"
           :style="{'bottom': arrow.bottom + 'rem'}"
-          class="absolute inset-x-0 bottom-20">
+          class="absolute inset-x-0 bottom-14">
       <a href="#services" @click.prevent="scrollTo('#services')">
         <img  src="/images/down-arrow.svg"
               :style="{'opacity': arrow.opacity}"
@@ -59,24 +59,6 @@
   </div>
 
 </main>
-<script>
-  function scrollTo(selector) {
-    document.querySelector(selector).scrollIntoView({
-      behavior: 'smooth',
-    })
-  }
-
-  document.addEventListener('alpine:init', () => {
-    /* Calculates desired arrow opacity from scroll position */
-    Alpine.magic('arrow', () => {
-      const scrollPos = Math.min(window.scrollY / window.innerHeight, 1.0)
-
-      return {
-        opacity: 1.0 - (scrollPos / 0.8),
-        bottom: 5.0 + (scrollPos * 4),
-        hidden: scrollPos >= 0.8,
-      }
-    })
-  })
-</script>
+{{ $js := resources.Get "js/arrow.js" | js.Build }}
+<script src="{{ $js.RelPermalink }}" defer></script>
 {{ end }}
