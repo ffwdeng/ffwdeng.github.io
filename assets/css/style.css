@@ -1097,8 +1097,8 @@ video {
   right: 0px;
 }
 
-.bottom-20 {
-  bottom: 5rem;
+.bottom-14 {
+  bottom: 3.5rem;
 }
 
 .top-0 {
@@ -1180,10 +1180,6 @@ video {
 
 .h-10 {
   height: 2.5rem;
-}
-
-.h-16 {
-  height: 4rem;
 }
 
 .h-6 {
