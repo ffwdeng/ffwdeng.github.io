@@ -24,7 +24,7 @@
     <nav :class="{'flex': open, 'hidden': !open}"
       class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
       {{ range site.Menus.main }}
-      <a class="px-4 py-2 mt-2 text-xl font-normal md:mt-0 md:ml-4 md:text-l hover:text-primary-500 focus:bg-primary-600"
+      <a class="px-4 py-2 mt-2 text-xl font-normal md:mt-0 md:ml-4 md:text-l hover:text-primary-500"
                 href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
                 {{ .Name }}
       </a>
