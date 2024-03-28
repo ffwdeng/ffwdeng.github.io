@@ -87,6 +87,9 @@ menus:
   - name: Imprint
     url: /imprint/
     weight: 40
+  - name: Cookies Policy
+    url: /cookies/
+    weight: 50
 
 markup:
   highlight:
