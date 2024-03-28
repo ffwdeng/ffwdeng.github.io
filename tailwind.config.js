@@ -3,6 +3,11 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 // tailwind.config.js
 module.exports = {
   content: ['./layouts/**/*.html', './content/**/*.md'],
+  safelist:[
+    {
+      pattern: /opacity-(0|10|20|30|40|50|60|70|80|90|100)/,
+    },
+  ],
   darkMode: 'class',
   theme: {
     extend: {

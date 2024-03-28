@@ -1,40 +1,54 @@
 {{ define "main" }}
-<main class="bg-neutral-900 text-white">
+<main class="bg-neutral-900 text-white -mt-16">
   <!-- big hero -->
-  <div class="bg-neutral-900">
-    <div class="max-w-screen-xl px-4 py-20 mx-auto md:py-36">
-        <div class="px-4 text-center sm:mb-6 lg:mb-0">
-          <h2 class="mx-auto pb-10 text-5xl font-normal md:text-8xl md:pb-10">
-            {{ .Site.Params.Motto }}
-          </h2>
-          <p class="max-w-xl mx-auto mb-6 font-light text-2xl md:mb-2 md:text-3xl">
-            {{ .Site.Params.Description }}
-          </p>
-        </div>
+  <div class="bg-neutral-900 h-lvh flex flex-col justify-center">
+    <div class="max-w-screen-xl px-4 mx-auto">
+      <div class="px-4 text-center sm:mb-6 lg:mb-0">
+        <h2 class="mx-auto pb-10 text-5xl text-right font-normal md:text-8xl md:pb-10">
+          {{ .Site.Params.Motto }}
+        </h2>
+        <p class="float-right max-w-3xl mb-6 text-right font-light text-2xl md:mb-2 md:text-3xl">
+          {{ .Site.Params.Description | markdownify }}
+        </p>
+      </div>
+    </div>
+
+    <!-- scroll arrow -->
+    <div  x-data="{arrow: {}}"
+          x-init="arrow = $arrow"
+          x-on:scroll.window="arrow = $arrow"
+          :class="{'hidden': arrow.hidden}"
+          :style="{'bottom': arrow.bottom + 'rem'}"
+          class="absolute inset-x-0 bottom-20">
+      <a href="#mission" @click.prevent="scrollTo('#mission')">
+        <img  src="/images/down-arrow.svg"
+              :style="{'opacity': arrow.opacity}"
+              class="mx-auto h-16" />
+      </a>
     </div>
   </div>
 
   <!-- mission statement -->
-  <div class="bg-primary-700">
+  <div class="bg-primary-700" id="mission">
     <div class="max-w-screen-xl mx-auto flex flex-col gap-2 px-4 py-14 text-center md:flex-row md:gap-20">
       <div class="flex flex-col flex-1 mb-10 md:justify-center md:mb-0">
         <div>
-          <h2 class="pb-10 text-4xl font-normal md:text-6xl md:pb-14">
-            {{ .Site.Params.Sections.Mission.Heading }}
-          </h2>
-          <p class="font-normal md:text-2xl">
+          <p class="font-semibold text-center text-3xl pb-8 md:text-right md:text-4xl">
             {{ .Site.Params.Sections.Mission.Content }}
+          </p>
+          <p class="font-normal text-center text-xl md:text-right md:text-2xl">
+            {{ .Site.Params.Sections.Mission.Content2 | markdownify }}
           </p>
         </div>
       </div>
       <div class="flex flex-col flex-1 gap-6 md:gap-10 md:pt-6 md:pb-8">
         {{ range .Site.Params.Sections.Mission.Columns }}
         <div>
-          <h3 class="pb-6 text-2xl font-normal md:pb-4 md:text-left">
+          <h3 class="pb-6 text-2xl font-bold md:pb-4 md:text-left">
             {{ .heading }}
           </h3>
           <p class="font-normal md:text-left md:text-xl md:font-light">
-            {{ .content }}
+            {{ .content | markdownify}}
           </p>
         </div>
         {{ end }}
@@ -45,9 +59,6 @@
   <!-- services -->
   <div class="bg-neutral-900">
     <div class="max-w-screen-xl px-4 py-20 mx-auto text-center md:px-10">
-      <h2 class="mx-auto pb-12 text-4xl font-normal md:text-6xl md:pb-20">
-        {{ .Site.Params.Sections.Services.Heading }}
-      </h2>
       <div class="flex flex-col gap-8 md:flex-row md:gap-20">
         {{ range .Site.Params.Sections.Services.Columns }}
         <div class="flex-1">
@@ -67,7 +78,7 @@
   <div class="bg-white text-neutral-900">
     <div class="max-w-screen-xl px-4 py-20 mx-auto text-center md:px-10">
       <h2 class="mx-auto pb-10 text-4xl font-normal md:text-6xl md:pb-16">
-        From our blog
+        Latest from our blog
       </h2>
       <div class="flex flex-col gap-6 text-left mb-16 md:flex-row md:gap-12 md:mb-20">
         {{ range (.Paginator 2).Pages }}
@@ -91,5 +102,26 @@
       </a>
     </div>
   </div>
+
 </main>
+<script>
+  function scrollTo(selector) {
+    document.querySelector(selector).scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
+  document.addEventListener('alpine:init', () => {
+    /* Calculates desired arrow opacity from scroll position */
+    Alpine.magic('arrow', () => {
+      const scrollPos = Math.min(window.scrollY / window.innerHeight, 1.0)
+
+      return {
+        opacity: 1.0 - (scrollPos / 0.8),
+        bottom: 5.0 + (scrollPos * 4),
+        hidden: scrollPos >= 0.8,
+      }
+    })
+  })
+</script>
 {{ end }}

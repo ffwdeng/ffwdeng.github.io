@@ -2,10 +2,8 @@
 title: About us
 ---
 
-The team is made up of young people with heterogeneous skills, enabling us to address the main aspects of the software lifecycle.
+Our team benefits from over 15 years of combined experience, strengthened by the guidance of senior business advisors with over three decades of invaluable industry insight. While headquartered in Italy, we also operate from Austria as our second base location.
 
-We are a company open to new ideas and based on mutual trust and we work together toward a common vision.
+This combination of experience and fresh talent enables us to effectively navigate all stages of the software and product delivery lifecycle. Our culture of innovation, collaboration, and trust allows professionals from around the globe to contribute to our projects, as we embrace remote work.
 
-Our head office is located in Italy, but it is possible to work with us remotely from anywhere in the world: currently the group is made of experts from three different countries.
-
-We are a fast-growing group and are always looking for new talent to come on board. 
+With our commitment to continuous growth and excellence, we eagerly welcome new additions to our dynamic team, ensuring we remain at the forefront of software development.
