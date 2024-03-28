@@ -18,3 +18,27 @@ NotoColorEmoji,
 Segoe UI Symbol,
 Android Emoji,
 EmojiSymbols;
+
+@layer components {
+  .section:nth-child(even) {
+    @apply bg-neutral-900;
+  }
+
+  .section:nth-child(odd) {
+    @apply bg-white text-neutral-900;
+  }
+
+  @media screen(md) {
+    .section:nth-child(even) {
+      h3, p {
+        @apply text-left;
+      }
+    }
+
+    .section:nth-child(odd) {
+      h3, p {
+        @apply text-right;
+      }
+    }
+  }
+}
