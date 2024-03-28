@@ -19,6 +19,3 @@ Share Capital: 35.000,00€
 #### Contact
 contact@ffwde.com\
 fast-forward@pec.it
-
-#### Cookie
-TODO: Cookie policy
