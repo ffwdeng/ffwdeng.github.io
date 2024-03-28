@@ -58,21 +58,18 @@ params:
 
 menus:
   main:
-  - name: About
-    url: /about/
-    weight: 10
   - name: Cybersecurity
     url: /cybersecurity/
-    weight: 20
+    weight: 10
   - name: Solutions
     url: /solutions/
+    weight: 20
+  - name: About
+    url: /about/
     weight: 30
   - name: Blog
     url: /blog/
     weight: 40
-  - name: Imprint
-    url: /imprint/
-    weight: 50
 
   footer:
   - name: About
@@ -87,6 +84,9 @@ menus:
   - name: Imprint
     url: /imprint/
     weight: 40
+  - name: Cookie Policy
+    url: /cookies/
+    weight: 50
 
 markup:
   highlight:
